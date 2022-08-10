@@ -2,19 +2,16 @@ package characters;
 
 public abstract class Character {
     private String name;
-    private int level;
-    private int health;
-    private int experience;
+    private int level = 1;
+    private int health = 75;
+    private int experience = 0;
 
-    public Character(String name, int level, int health, int experience) {
+    public Character(String name) {
         this.name = name;
-        this.level = level;
-        this.health = health;
-        this.experience = experience;
     }
 
     public String getName() {
-        return name;
+        return this.name;
     }
 
     public void setName(String name) {
@@ -22,7 +19,7 @@ public abstract class Character {
     }
 
     public int getLevel() {
-        return level;
+        return this.level;
     }
 
     public void setLevel(int level) {
@@ -30,7 +27,7 @@ public abstract class Character {
     }
 
     public int getHealth() {
-        return health;
+        return this.health;
     }
 
     public void setHealth(int health) {
@@ -38,7 +35,7 @@ public abstract class Character {
     }
 
     public int getExperience() {
-        return experience;
+        return this.experience;
     }
 
     public void setExperience(int experience) {
