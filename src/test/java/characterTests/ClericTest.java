@@ -1,36 +1,37 @@
 package characterTests;
 
-import characters.Warlock;
+import characters.Cleric;
+import characters.Wizard;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class WarlockTest {
-    Warlock saruman;
+public class ClericTest {
+    Cleric apollo;
 
     @Before
     public void before() {
-        saruman = new Warlock("Saruman");
+        apollo = new Cleric("Apollo");
     }
 
     @Test
     public void canGetName() {
-        assertEquals("Saruman", saruman.getName());
+        assertEquals("Apollo", apollo.getName());
     }
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, saruman.getLevel());
+        assertEquals(1, apollo.getLevel());
     }
 
     @Test
     public void canGetHealthBar() {
-        assertEquals(75, saruman.getHealth());
+        assertEquals(75, apollo.getHealth());
     }
 
     @Test
     public void startsWith0Experience() {
-        assertEquals(0, saruman.getExperience());
+        assertEquals(0, apollo.getExperience());
     }
 }

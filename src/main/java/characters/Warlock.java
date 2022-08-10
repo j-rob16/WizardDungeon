@@ -9,6 +9,6 @@ public class Warlock extends Character implements IMagic {
 
     @Override
     public void castSpell() {
-        
+
     }
 }
