@@ -9,6 +9,6 @@ public class Cleric extends Character implements IHealer {
 
     @Override
     public void heal() {
-        
+
     }
 }
