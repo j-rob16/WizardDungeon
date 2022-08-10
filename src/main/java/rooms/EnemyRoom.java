@@ -1,14 +1,14 @@
 package rooms;
 
 import enemies.Enemy;
-import interfaces.IRoom;
+import interfaces.IExperience;
 
 import java.util.ArrayList;
 
-public class EnemyRoom extends Room implements IRoom {
+public class EnemyRoom extends Room implements IExperience {
     private ArrayList<Enemy> enemies;
-    public EnemyRoom(String name) {
-        super(name);
+    public EnemyRoom(String name, int availableExperience) {
+        super(name, availableExperience);
         this.enemies = new ArrayList<>();
     }
 
@@ -28,7 +28,7 @@ public class EnemyRoom extends Room implements IRoom {
     }
 
     @Override
-    public void getExperience() {
-
+    public int getExperience() {
+        return this.getAvailableExperience();
     }
 }

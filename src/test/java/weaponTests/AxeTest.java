@@ -39,4 +39,9 @@ public class AxeTest {
     public void canGetDoubleHackDamage() {
         assertEquals(20, axe.hack());
     }
+
+    @Test
+    public void canGetWeaponValue() {
+        assertEquals(10, axe.getValue());
+    }
 }

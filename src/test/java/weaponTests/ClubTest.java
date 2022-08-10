@@ -39,4 +39,8 @@ public class ClubTest {
     public void canGetHalfHackDamage() {
         assertEquals(5, club.hack());
     }
+    @Test
+    public void canGetWeaponValue() {
+        assertEquals(10, club.getValue());
+    }
 }

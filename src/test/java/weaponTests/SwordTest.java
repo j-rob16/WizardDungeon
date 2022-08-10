@@ -38,4 +38,9 @@ public class SwordTest {
     public void canGetHalfHackDamage() {
         assertEquals(5, sword.hack());
     }
+
+    @Test
+    public void canGetWeaponValue() {
+        assertEquals(10, sword.getValue());
+    }
 }

@@ -1,18 +1,18 @@
 package rooms;
 
-import interfaces.IRoom;
+import interfaces.IExperience;
 import interfaces.ITreasure;
 
 import java.util.ArrayList;
 
-public class TreasureRoom extends Room implements IRoom {
+public class TreasureRoom extends Room implements IExperience {
     private ArrayList<ITreasure> treasure;
-    public TreasureRoom(String name) {
-        super(name);
+    public TreasureRoom(String name, int availableExperience) {
+        super(name, availableExperience);
     }
 
     @Override
-    public void getExperience() {
-
+    public int getExperience() {
+        return this.getAvailableExperience();
     }
 }

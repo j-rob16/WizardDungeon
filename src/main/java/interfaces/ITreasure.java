@@ -1,5 +1,5 @@
 package interfaces;
 
 public interface ITreasure {
-    void ;
+    int getValue();
 }

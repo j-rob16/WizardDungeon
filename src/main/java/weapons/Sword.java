@@ -1,8 +1,9 @@
 package weapons;
 
 import interfaces.IAttacks;
+import interfaces.ITreasure;
 
-public class Sword extends Weapon implements IAttacks {
+public class Sword extends Weapon implements IAttacks, ITreasure {
     public Sword(String name, int damage) {
         super(name, damage);
     }
@@ -20,5 +21,10 @@ public class Sword extends Weapon implements IAttacks {
     @Override
     public int hack() {
         return this.getDamage() / 2;
+    }
+
+    @Override
+    public int getValue() {
+        return this.getDamage() * this.getLevel();
     }
 }

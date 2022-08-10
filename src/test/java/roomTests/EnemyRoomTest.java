@@ -14,13 +14,18 @@ public class EnemyRoomTest {
 
     @Before
     public void before() {
-        room = new EnemyRoom("Dungeon");
+        room = new EnemyRoom("Dungeon", 100);
         ogre = new Ogre("Ogg", 20, 200);
     }
 
     @Test
     public void canGetRoomName() {
         assertEquals("Dungeon", room.getName());
+    }
+
+    @Test
+    public void canGetAvailableExperience() {
+        assertEquals(100, room.getAvailableExperience());
     }
 
     @Test
