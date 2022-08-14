@@ -2,13 +2,13 @@ package characters;
 
 import enemies.Enemy;
 import interfaces.IFighter;
+import weapons.Fists;
 import weapons.Weapon;
 
 public class Dwarf extends Character implements IFighter {
-    private Weapon weapon;
-    public Dwarf(String name, Weapon weapon) {
+    private Weapon weapon = new Fists("Fists", 5);
+    public Dwarf(String name) {
         super(name);
-        this.weapon = weapon;
     }
 
     @Override
@@ -18,8 +18,10 @@ public class Dwarf extends Character implements IFighter {
 
     @Override
     public double attackDamage() {
+        int weaponDamage = this.getWeapon().getDamage();
+        int weaponLevel = this.getWeapon().getLevel();
         double damageMultiplier = this.getLevel().getDamageMultiplier();
-        return damageMultiplier;
+        return weaponDamage * weaponLevel * damageMultiplier;
     }
 
     @Override
