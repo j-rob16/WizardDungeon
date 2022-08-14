@@ -1,6 +1,7 @@
 package characterTests;
 
 import characters.Barbarian;
+import characters.CharacterLevel;
 import characters.Knight;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class KnightTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, arthur.getLevel());
+        assertEquals(CharacterLevel.ONE, arthur.getLevel());
     }
 
     @Test

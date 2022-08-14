@@ -1,6 +1,8 @@
 package characters;
 
+import enemies.Enemy;
 import interfaces.IFighter;
+import weapons.Weapon;
 
 public class Knight extends Character implements IFighter {
     public Knight(String name) {
@@ -8,7 +10,17 @@ public class Knight extends Character implements IFighter {
     }
 
     @Override
-    public void attack() {
+    public Weapon getWeapon() {
+        return null;
+    }
+
+    @Override
+    public double attackDamage() {
+        return 0;
+    }
+
+    @Override
+    public void attack(Enemy enemy) {
 
     }
 }

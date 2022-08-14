@@ -23,5 +23,5 @@ public class GameTest {
         assertNull(game.getPlayer());
     }
 
-    
+
 }

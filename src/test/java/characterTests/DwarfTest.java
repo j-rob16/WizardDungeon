@@ -1,18 +1,22 @@
 package characterTests;
 
+import characters.CharacterLevel;
 import characters.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
+import weapons.Axe;
 
 import static org.junit.Assert.assertEquals;
 
 public class DwarfTest {
 
     Dwarf gimli;
+    Axe axe;
 
     @Before
     public void before() {
-        gimli = new Dwarf("Gimli");
+        axe = new Axe("Cleaver", 50);
+        gimli = new Dwarf("Gimli", axe);
     }
 
     @Test
@@ -22,7 +26,7 @@ public class DwarfTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, gimli.getLevel());
+        assertEquals(CharacterLevel.ONE, gimli.getLevel());
     }
 
     @Test
@@ -33,5 +37,10 @@ public class DwarfTest {
     @Test
     public void startsWith0Experience() {
         assertEquals(0, gimli.getExperience());
+    }
+
+    @Test
+    public void canGetWeapon() {
+        assertEquals(axe, gimli.getWeapon());
     }
 }

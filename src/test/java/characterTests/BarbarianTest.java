@@ -1,6 +1,7 @@
 package characterTests;
 
 import characters.Barbarian;
+import characters.CharacterLevel;
 import characters.Dwarf;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,7 +23,7 @@ public class BarbarianTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, conan.getLevel());
+        assertEquals(CharacterLevel.ONE, conan.getLevel());
     }
 
     @Test

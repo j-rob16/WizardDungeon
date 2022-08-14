@@ -2,7 +2,7 @@ package characters;
 
 public abstract class Character {
     private String name;
-    private int level = 1;
+    private CharacterLevel level = CharacterLevel.ONE;
     private int health = 75;
     private int experience = 0;
 
@@ -18,12 +18,8 @@ public abstract class Character {
         this.name = name;
     }
 
-    public int getLevel() {
+    public CharacterLevel getLevel() {
         return this.level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
     }
 
     public int getHealth() {

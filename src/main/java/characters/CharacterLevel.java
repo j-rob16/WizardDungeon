@@ -15,4 +15,8 @@ public enum CharacterLevel {
     private final int level;
     private final double healthMultiplier;
     private final double damageMultiplier;
+
+    public double getDamageMultiplier() {
+        return damageMultiplier;
+    }
 }

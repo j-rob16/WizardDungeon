@@ -1,5 +1,6 @@
 package characterTests;
 
+import characters.CharacterLevel;
 import characters.Cleric;
 import characters.Wizard;
 import org.junit.Before;
@@ -22,7 +23,7 @@ public class ClericTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, apollo.getLevel());
+        assertEquals(CharacterLevel.ONE, apollo.getLevel());
     }
 
     @Test

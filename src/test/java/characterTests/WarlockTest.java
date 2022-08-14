@@ -1,5 +1,6 @@
 package characterTests;
 
+import characters.CharacterLevel;
 import characters.Warlock;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class WarlockTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, saruman.getLevel());
+        assertEquals(CharacterLevel.ONE, saruman.getLevel());
     }
 
     @Test

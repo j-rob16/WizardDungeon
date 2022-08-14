@@ -1,5 +1,6 @@
 package characterTests;
 
+import characters.CharacterLevel;
 import characters.Wizard;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +22,7 @@ public class WizardTest {
 
     @Test
     public void canGetLevel() {
-        assertEquals(1, gandalf.getLevel());
+        assertEquals(CharacterLevel.ONE, gandalf.getLevel());
     }
 
     @Test
